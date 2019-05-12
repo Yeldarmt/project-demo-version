@@ -1,0 +1,13 @@
+<body>
+  <ng-container>
+    <h1>Gyms:</h1>
+    <div class = "gyms">
+      <figure class="figGym" *ngFor="let gym of gyms">
+        <a><img routerLink="gym" src="{{gym.image}}" (click)="getGymInfo(gym)"></a>
+        <figcaption class="gymName">
+          <a>{{gym.name}}</a>
+        </figcaption>
+      </figure>
+    </div>
+  </ng-container>
+</body>

@@ -1,0 +1,10 @@
+.figCoach {
+  display: inline-block;
+  margin-left: 70px;
+}
+.coaches img {
+  width: 300px;
+  height: 400px;
+  border-radius: 8px;
+  border: 8px double black;
+}

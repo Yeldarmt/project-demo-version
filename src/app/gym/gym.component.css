@@ -1,0 +1,55 @@
+p {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.aboutGym {
+}
+.gymName {
+  text-align: center;
+  font-size: 24px;
+  color: rgb(255, 57, 13);
+  font-weight: bold;
+}
+
+.gym img {
+  width: 600px;
+  height: 400px;
+  border-radius: 8px;
+}
+.gym {
+  text-align: center;
+}
+.gym figure{
+  float: left;
+}
+.coaches {
+  margin-left: 25px;
+  margin-top: 50px;
+}
+.photoGym {
+  float: left;
+  margin-left: 220px;
+}
+.scrollbar {
+  font-size: 20px;
+  width: 500px;
+  height: 375px;
+  overflow-y: scroll;
+  margin-left: 643px;
+  background-color: #1c2833;
+  color: white;
+}
+.redRows {
+  font-size: 16px;
+  color: #e73000;
+}
+.whiteRows {
+  font-size: 16px;
+  color: white;
+}
+table {
+  background-color: black;
+  color: white;
+  font-family: ProximaNova-Regular,Arial,sans-serif;
+  margin-top: 50px;
+  margin-left: 300px;
+}

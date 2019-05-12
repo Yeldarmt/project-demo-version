@@ -1,0 +1,62 @@
+p {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.gyms figure{
+  display: inline-block;
+}
+.gyms {
+   margin-left: 125px;
+ }
+.gyms img {
+  width: 600px;
+  height: 400px;
+  border-radius: 8px;
+}
+
+.create {
+  text-align: center;
+}
+button {
+  border-radius: 5px;
+  border: none;
+  width: 100px;
+  height: 26px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  font-size: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+input {
+  border-radius: 5px;
+  width: 200px;
+  height: 25px;
+  text-align: center;
+}
+.tasks {
+  color: #4fdee5;
+  text-align: center;
+  font-size: 22px;
+}
+h1 {
+  text-align: center;
+  color: darkorange;
+}
+body {
+  height: 800px;
+}
+.logout:hover {
+  color: red;
+}
+/*******************************header**********************************/
+
+
+/*********************Authorization**********************/
+
+/********************table*********************/
+
+

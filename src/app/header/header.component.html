@@ -1,0 +1,24 @@
+<div>
+  <div class="header1">
+    <img src="http://www.fitnessblitz.com/cms/uploads/file_1513237297_673122978.png" style="display: inline-block; max-width: 30%">
+<!--    <button id="logout" (click)="logout()">Log out</button>-->
+    <a class = "login" (click)="log()">Log in</a>
+    <a class = "ofitness" (click)="getAbout()">O FITNESSBLITZ</a>
+  </div>
+
+
+  <ng-container *ngIf="authlogin">
+
+    <div class="background">
+    </div>
+    <div class="authorization">
+      <button class="xbutton" (click)="x()">X</button>
+      <img src="https://www.shareicon.net/download/2015/09/14/100950_user_512x512.png" style="display: inline-block;">
+      <div><input type="text" [(ngModel)]="username" placeholder="Username"></div>
+      <div><input type="password" [(ngModel)]="password" placeholder="Password"></div>
+      <div class="loginbutton"><button (click)="auth()">LOG IN</button></div>
+    </div>
+  </ng-container>
+
+</div>
+

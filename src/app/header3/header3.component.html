@@ -1,0 +1,21 @@
+<ng-container>
+  <div class = "main_div">
+    <div class = "header_div">
+      <img src="http://www.fitnessblitz.com/cms/uploads/file_1513237297_673122978.png">
+      <div class="nav">
+        <ul>
+          <!--            <li><a routerLink=""  id="nav_element1">O FITNESSBLITZ</a></li>-->
+          <li><a routerLink="" id = "nav_element2" (click)="club()" >НАШИ КЛУБЫ</a></li>
+          <li><a routerLink="" id = "nav_element3" (click)="trener()">ТРЕНЕРЫ</a></li>
+          <li><a routerLink="" id = "nav_element4">НОВОСТИ</a></li>
+          <li><a routerLink="" (click)="getFeedback()">ОТЗЫВЫ</a></li>
+          <li><a routerLink="">ОПЛАТА</a></li>
+          <li><a routerLink="">КОНТАКТЫ</a></li>
+          <button id="logout" (click)="logout()">Log out</button>
+          <!--        <li><button  id = "vhod">Вход</button></li>-->
+          <!--        <li><button id = "reg">Регистрация</button></li>-->
+        </ul>
+      </div>
+    </div>
+  </div>
+</ng-container>
