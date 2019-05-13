@@ -28,6 +28,14 @@ export class HeaderComponent implements OnInit {
     // this.logged = this.provider.logged;
     this.gymClicked = JSON.parse(localStorage.getItem('gymClicked'));
     this.registered = false;
+    this.username = '';
+    this.password = '';
+    this.password2 = '';
+    this.name = '';
+    this.surname = '';
+    this.email = '';
+    this.phone = '';
+    this.status = '';
     // localStorage.setItem('login', 'false');
     // this.login = JSON.parse(localStorage.getItem('login'));
   }
@@ -40,6 +48,11 @@ export class HeaderComponent implements OnInit {
     this.router.navigate([{outlets: {primary: 'about'}}]);
   }
   auth() {
+    // if (this.username === '') {
+    //   alert('Error');
+    // } else {
+    //   console.log('else');
+    // }
     if (this.username !== '' && this.password !== '') {
       this.provider.auth(this.username, this.password).then(res => {
         localStorage.setItem('token', res.token);
@@ -59,11 +72,28 @@ export class HeaderComponent implements OnInit {
   }
   register() {
     if (this.username !== '' && this.password !== '' && this.name !== '' && this.surname !== '') {
-      // if (this.email !== '' && this.phone !== '' && this.status !== '') {
-      //   console.log('registered');
-      // } else {
-      //   alert('Заполните все поля!');
-      // }
+      if (this.password2 !== '' && this.email !== '' && this.phone !== '' && this.status !== '') {
+        if (this.password === this.password2) {
+          console.log('registered' + this.password + this.password2);
+          this.provider.createClient(1, this.name, this.surname, this.username,
+            this.password, this.email, this.phone, this.status).then( res => {
+            console.log('Client created');
+            this.provider.auth(this.username, this.password).then(ress => {
+              localStorage.setItem('token', ress.token);
+              console.log(localStorage.getItem('token'));
+            });
+            localStorage.setItem('login', 'true');
+            this.login = JSON.parse(localStorage.getItem('login'));
+            console.log('OK');
+            this.router.navigate([{outlets: {primary: 'main' , header: 'header2'}}]);
+            this.authlogin = false;
+          });
+        } else {
+          alert('You write two different password');
+        }
+      } else {
+        alert('Заполните все поля!');
+      }
     } else {
       alert('Заполните все поля!');
     }

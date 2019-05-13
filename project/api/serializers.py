@@ -70,10 +70,10 @@ class ClientSerializer(serializers.ModelSerializer):
     # registered_date = serializers.DateTimeField(required=True)
     # image = serializers.CharField(required=True)
     # coach_id = serializers.IntegerField(write_only=True, required=False)
-    # gym_id = serializers.IntegerField(write_only=True)
+    gym_id = serializers.IntegerField(required=True)
     class Meta:
         model = Client
-        fields = ('id', 'name', 'surname', 'username', 'password', 'email', 'phone', 'status')
+        fields = ('id', 'name', 'surname', 'username', 'password', 'email', 'phone', 'status', 'gym_id')
 
 
 class FeedbackSerializer(serializers.Serializer):

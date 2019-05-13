@@ -43,4 +43,16 @@ export class ProviderService extends MainService {
   getFeedback(gym: IGym): Promise<IFeedback[]> {
     return this.get(`http://localhost:8000/api/gym_lists/${gym.id}/feedback/`, {});
   }
+  createClient(gymId: number, n: string, s: string, u: string, p: string, e: string, ph: string, st: string): Promise <IClient> {
+    return this.post(`http://localhost:8000/api/gym_lists/${gymId}/client_list/`, {
+      name: n,
+      surname: s,
+      username: u,
+      password: p,
+      email: e,
+      phone: ph,
+      status: st,
+      gym_id: gymId
+    });
+  }
 }
