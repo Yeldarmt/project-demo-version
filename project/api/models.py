@@ -49,12 +49,13 @@ class Coach(models.Model):
 class Client(models.Model):
     name = models.CharField(max_length=200)
     surname = models.CharField(max_length=200)
-    age = models.IntegerField()
-    status = models.CharField(max_length=200)
-    registered_date = models.DateTimeField()
-    image = models.CharField(max_length=400, default=None, null=True)
-    coach = models.ForeignKey(Coach, on_delete=models.CASCADE, default=None, null=True)
-    gym = models.ForeignKey(Gym, on_delete=models.CASCADE, default=None, null=True)
+    username = models.CharField(max_length=200, default=None, null=True)
+    password = models.CharField(max_length=200, default=None, null=True)
+    email = models.CharField(max_length=200, default=None, null=True)
+    phone = models.CharField(max_length=200, default=None, null=True)
+    status = models.CharField(max_length=200, default=None, null=True)
+    # coach = models.ForeignKey(Coach, on_delete=models.CASCADE, default=None, null=True)
+    # gym = models.ForeignKey(Gym, on_delete=models.CASCADE, default=None, null=True)
     objects = GymManager()
 
     def __str__(self):

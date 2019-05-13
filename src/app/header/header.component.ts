@@ -11,8 +11,15 @@ export class HeaderComponent implements OnInit {
   // logged: boolean;
   gymClicked: boolean;
   login: boolean;
+  registered: boolean;
   username: string;
   password: string;
+  password2: string;
+  name: string;
+  surname: string;
+  email: string;
+  phone: string;
+  status: string;
   authlogin: boolean;
   constructor(private router: Router, private provider: ProviderService) {
   }
@@ -20,11 +27,13 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     // this.logged = this.provider.logged;
     this.gymClicked = JSON.parse(localStorage.getItem('gymClicked'));
+    this.registered = false;
     // localStorage.setItem('login', 'false');
     // this.login = JSON.parse(localStorage.getItem('login'));
   }
   x() {
     this.authlogin = false;
+    this.registered = false;
   }
 
   getAbout() {
@@ -45,7 +54,20 @@ export class HeaderComponent implements OnInit {
       alert('Заполните все поля!');
     }
   }
-
+  reg() {
+    this.registered = true;
+  }
+  register() {
+    if (this.username !== '' && this.password !== '' && this.name !== '' && this.surname !== '') {
+      // if (this.email !== '' && this.phone !== '' && this.status !== '') {
+      //   console.log('registered');
+      // } else {
+      //   alert('Заполните все поля!');
+      // }
+    } else {
+      alert('Заполните все поля!');
+    }
+  }
   log() {
     if (JSON.parse(localStorage.getItem('login')) === true) {
       alert('You already logged');

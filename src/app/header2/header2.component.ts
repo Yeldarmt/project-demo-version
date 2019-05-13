@@ -31,7 +31,7 @@ export class Header2Component implements OnInit {
       localStorage.setItem('login', 'true');
       this.login = JSON.parse(localStorage.getItem('login'));
       console.log('OK');
-      this.router.navigateByUrl('main');
+      // this.router.navigateByUrl('main');
       this.authlogin = false;
     } else {
       alert('Заполните все поля!');

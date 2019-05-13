@@ -26,10 +26,13 @@ export interface IClient {
   id: number;
   name: string;
   surname: string;
-  age: number;
+  username: string;
+  password: string;
+  email: string;
+  phone: string;
   status: string;
-  registered_date: string;
-  image: string;
+  // registered_date: string;
+  // image: string;
 }
 export interface ITest {
   id: number;

@@ -60,15 +60,20 @@ class ClientSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True)
     name = serializers.CharField(required=True)
     surname = serializers.CharField(required=True)
-    age = serializers.IntegerField(required=True)
+    username = serializers.CharField(required=True)
+    password = serializers.CharField(required=True)
+    email = serializers.CharField(required=True)
+    phone = serializers.CharField(required=True)
     status = serializers.CharField(required=True)
-    registered_date = serializers.DateTimeField(required=True)
-    image = serializers.CharField(required=True)
-    coach_id = serializers.IntegerField(write_only=True, required=False)
-    gym_id = serializers.IntegerField(write_only=True)
+    # age = serializers.IntegerField(required=True)
+    # status = serializers.CharField(required=True)
+    # registered_date = serializers.DateTimeField(required=True)
+    # image = serializers.CharField(required=True)
+    # coach_id = serializers.IntegerField(write_only=True, required=False)
+    # gym_id = serializers.IntegerField(write_only=True)
     class Meta:
         model = Client
-        fields = ('id', 'name', 'surname', 'age', 'status', 'registered_date', 'image', 'coach_id', 'gym_id')
+        fields = ('id', 'name', 'surname', 'username', 'password', 'email', 'phone', 'status')
 
 
 class FeedbackSerializer(serializers.Serializer):
