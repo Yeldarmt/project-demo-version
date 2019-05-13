@@ -20,9 +20,9 @@ export class ProviderService extends MainService {
   getCoaches(gym: IGym): Promise<ICoach[]> {
     return this.get(`http://localhost:8000/api/gym_lists/${gym.id}/coach_list/`, {});
   }
-  // getClients(gym: IGym): Promise<IClient[]> {
-  //   return this.get(`http://localhost:8000/api/gym_lists/${gym.id}/client_list/`, {})
-  // }
+  getClients(gid: number): Promise<IClient[]> {
+    return this.get(`http://localhost:8000/api/gym_lists/${gid}/client_list/`, {});
+  }
   // getCoachInfo(gym: IGym, coach: ICoach): Promise<ICoach> {
   //   return this.get(`http://localhost:8000/api/gym_lists/${gym.id}/coach_list/${coach.id}/`, {});
   // }

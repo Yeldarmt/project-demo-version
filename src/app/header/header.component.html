@@ -5,8 +5,6 @@
     <a class = "login" (click)="log()">Log in</a>
     <a class = "ofitness" (click)="getAbout()">O FITNESSBLITZ</a>
   </div>
-
-
   <ng-container *ngIf="authlogin && !registered">
 
     <div class="background1">
@@ -16,8 +14,10 @@
       <img src="https://www.shareicon.net/download/2015/09/14/100950_user_512x512.png" style="display: inline-block;">
       <div><input type="text" [(ngModel)]="username" placeholder="Username"></div>
       <div><input type="password" [(ngModel)]="password" placeholder="Password"></div>
+      <input type="checkbox" [(ngModel)]="asAdmin" value="admin" [checked]="asAdmin"> as Admin<br>
+      <input type="checkbox" [(ngModel)]="asClient" value="client" [checked]="asClient"> as Client<br>
       <div class="loginbutton"><button (click)="auth()">LOG IN</button></div>
-      <div class="regbutton"><button (click)="reg()">Register</button></div>
+      <div class="regbutton1"><button (click)="reg()">Register</button></div>
     </div>
   </ng-container>
   <ng-container *ngIf="authlogin && registered">
@@ -43,7 +43,12 @@
       <div><input type="text" [(ngModel)]="phone" placeholder="Phone Number"></div>
       <span>Status</span>
       <div><input type="text" [(ngModel)]="status" placeholder="Status"></div>
-      <div class="regbutton"><button (click)="register()">Register</button></div>
+      <span>Write gym id</span><br>
+      <select class="gym">
+        <option value="gymm" *ngFor="let g of gyms" [value]="g">{{g.id}}. {{g.name}}</option>
+      </select>
+      <ng-container><input class="gymId" type="number" [(ngModel)]="gymId" placeholder="Write gym id"></ng-container>
+      <div class="regbutton2"><button (click)="register()">Register</button></div>
     </div>
   </ng-container>
 

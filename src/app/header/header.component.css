@@ -67,10 +67,10 @@ button {
   opacity: 0.5;
 }
 .background2 {
-  position: fixed;
+  position: absolute;
   z-index: 1;
   width: 600px;
-  height: 540px;
+  height: 590px;
   padding-top: 80px;
   text-align: center;
   /*padding-bottom: 0;*/
@@ -109,9 +109,9 @@ button {
 
 .registration {
   z-index: 2;
-  position: fixed;
+  position: absolute;
   width: 600px;
-  height: 620px;
+  height: 670px;
   text-align: center;
 /*padding-bottom: 0;*/
   border: 1px solid black;
@@ -129,7 +129,7 @@ button {
   color: white;
   font-size: 16px;
 }
-.regbutton button {
+.regbutton1 button {
   margin-top: 10px;
   width: 150px;
   background-color: blue;
@@ -140,10 +140,36 @@ button {
   color: white;
   font-size: 16px;
 }
+.regbutton2 button {
+  margin-top: 10px;
+  width: 150px;
+  background-color: blue;
+  /*background-color: black;*/
+  border: 0;
+  border-radius: 8px;
+  height: 40px;
+  color: white;
+  font-size: 16px;
+}
+.registration select {
+  margin-top: 0px;
+  height: 40px;
+  width: 300px;
+  border-radius: 6px;
+  text-align: center;
+  border: 0;
+}
 .authorization div input {
   margin-top: 18px;
   height: 40px;
   width: 300px;
+  border-radius: 6px;
+  text-align: center;
+  border: 0;
+}
+.gymId {
+  height: 40px;
+  width: 150px;
   border-radius: 6px;
   text-align: center;
   border: 0;
@@ -155,6 +181,7 @@ button {
   text-align: center;
   border: 0;
 }
+
 .authorization span {
   background-color: white;
   /*float: left;*/
